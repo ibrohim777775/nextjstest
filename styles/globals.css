@@ -13,4 +13,17 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 50px 0;
+  min-height: 100vh;
+  /* background-color: #f1f1f1; */
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
 }
