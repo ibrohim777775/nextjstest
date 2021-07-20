@@ -21,20 +21,21 @@ export default function Posts({posts}:PostsPage) {
           {/* <h1>Hello world</h1> */}
         
           <div className="posts">
-            {posts.map(item=> (
-            <div key={item.id} className="post__items">
-              <div className="post__inners">
-                <Link href={`posts/[id]`} as={`posts/${item.id}`}>
-                  <a>
-                <h4 className="post__title">{item.title}</h4>
+            {posts.map(item=> {if (item.title || item.body) { return(
+              
+              <div key={item.id} className="post__items">
+                <div className="post__inners">
+                  <Link href={`posts/[id]`} as={`posts/${item.id}`}>
+                    <a>
+                  <h4 className="post__title">{item.title}</h4>
 
-                  </a>
-                </Link>
-                <p className="post__body">{item.body}</p>
+                    </a>
+                  </Link>
+                  <p className="post__body">{item.body}</p>
+                </div>
               </div>
-            </div>
 
-            ))}
+            )} })}
           </div>
          
         </div>
